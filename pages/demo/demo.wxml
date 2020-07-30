@@ -1,0 +1,24 @@
+<!--pages/demo/demo.wxml-->
+<view>hello world</view>
+<view>{{msg}}</view>
+<image src="{{img}}"></image>
+<view wx:for="{{arr}}" wx:key="index">
+  {{index}}  {{item}}
+</view>
+<view wx:for="{{list}}" wx:key="index" class="bonner">
+  {{item.name}}  {{item.age}}
+</view>
+<view wx:if="{{isLogin}}">jerry</view>
+<view wx:else class="bonner">请登录</view>
+<view wx:if="{{!hidden}}">hidden</view>
+<view class="box" bindtap="onBoxTapHandle">
+  <view class="child" bindtap="onChildTapHandle"></view>
+</view>
+<view class="box" catchtap="onBoxTapHandle">
+  <view class="child" catchtap="onChildTapHandle"></view>
+</view>
+<view class="box" catch:tap="onBoxTapHandle" data-id="1234">
+  <view class="child" catch:tap="onChildTapHandle"></view>
+</view>
+<button size="large" bindtap="onTapHand">点我加1</button>
+<view>{{count}}</view>
